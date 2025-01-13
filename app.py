@@ -4,7 +4,9 @@ restaurante_0 = Restaurante('praça do sushi', 'japonesa')
 restaurante_1 = Restaurante('pizza do jao', 'pizzaria')
 restaurante_2 = Restaurante('Quentinhas do PP', 'popular')
 
-restaurante_1.alterar_estado()
+restaurante_0.receber_avaliacao('Junin', 10)
+restaurante_0.receber_avaliacao('Lulinha', 9)
+restaurante_0.receber_avaliacao('Christakis', 7)
 
 def main():
     Restaurante.listar_restaurantes()

@@ -1,3 +1,6 @@
+from modelos.avaliacao import Avaliacao
+
+
 class Restaurante:
     restaurantes = []
     
@@ -5,6 +8,7 @@ class Restaurante:
         self._nome = nome.title()
         self._categoria = categoria.upper()
         self._ativo = False
+        self.avaliacao = []
         Restaurante.restaurantes.append(self)
     def __str__(self):
         return f'{self._nome} | {self._categoria}'
@@ -19,4 +23,8 @@ class Restaurante:
     
     def alterar_estado(self):
         self._ativo = not self._ativo
+
+    def receber_avaliacao(self, cliente, nota):
+        avaliacao = Avaliacao(cliente, nota)
+        self._avaliacao.append(avaliacao)
 
