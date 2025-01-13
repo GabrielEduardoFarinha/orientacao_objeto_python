@@ -20,8 +20,3 @@ class Restaurante:
     def alterar_estado(self):
         self._ativo = not self._ativo
 
-restaurante_praca = Restaurante('Praça do shushi', 'japones')
-restaurante_praca.alterar_estado()
-restaurante_pizza = Restaurante('Pizza do Jao', 'pizzaria')
-
-Restaurante.listar_restaurantes()
