@@ -5,8 +5,8 @@ restaurante_1 = Restaurante('pizza do jao', 'pizzaria')
 restaurante_2 = Restaurante('Quentinhas do PP', 'popular')
 
 restaurante_0.receber_avaliacao('Junin', 10)
-restaurante_0.receber_avaliacao('Lulinha', 9)
-restaurante_0.receber_avaliacao('Christakis', 7)
+restaurante_0.receber_avaliacao('', 9)
+restaurante_0.receber_avaliacao('Christakis', 2)
 
 def main():
     Restaurante.listar_restaurantes()
