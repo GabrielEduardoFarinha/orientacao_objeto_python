@@ -1,15 +1,15 @@
 from modelos.restaurante import Restaurante
+from modelos.cardapio.bebida import Bebida
+from modelos.cardapio.prato import Prato
 
 restaurante_0 = Restaurante('praça do sushi', 'japonesa')
-restaurante_1 = Restaurante('pizza do jao', 'pizzaria')
-restaurante_2 = Restaurante('Quentinhas do PP', 'popular')
+bebida_1 = Bebida('guaravita', 2.00, '300ml')
+prato_1 = Prato('lamen', 49.00, 'Lamen de tonkostu')
 
-restaurante_0.receber_avaliacao('Junin', 5)
-restaurante_0.receber_avaliacao('PD', 5)
-restaurante_0.receber_avaliacao('Christakis', 7)
 
 def main():
-    Restaurante.listar_restaurantes()
+    print(prato_1)
+    print(bebida_1)
 
 
 
