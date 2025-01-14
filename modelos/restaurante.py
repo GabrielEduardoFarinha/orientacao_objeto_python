@@ -51,13 +51,22 @@ class Restaurante:
     @property
 
     def exibir_cardapio(self):
-        print(f'Cardapio do restaurante {self._nome}\n')
-        for i,item in enumerate(self._cardapio,start=1):
-            if hasattr(item,'descricao'):
-                mensagem_prato = f'{i}. Nome: {item._nome} | Preço: R$ {item._preco} | Descrição: {item.descricao} '
-                print(mensagem_prato)
+        print(f'Cardápio do restaurante {self._nome}\n')
+        for i, item in enumerate(self._cardapio, start=1):
+        # Verifica se o item tem o atributo 'descricao', o que é típico de 'Prato' e 'Sobremesa'
+            if hasattr(item, 'descricao'):
+            # Se o item for 'Sobremesa', incluir o 'tipo' e 'tamanho'
+                if hasattr(item, 'tipo') and hasattr(item, 'tamanho'):
+                    mensagem_sobremesa = f'{i}. Nome: {item._nome} | Preço: R$ {item._preco} | Descrição: {item.descricao} | Tipo: {item.tipo} | Tamanho: {item.tamanho} '
+                    print(mensagem_sobremesa)
+                else:
+                # Se o item não tiver 'tipo' e 'tamanho', é um 'Prato'
+                    mensagem_prato = f'{i}. Nome: {item._nome} | Preço: R$ {item._preco} | Descrição: {item.descricao} '
+                    print(mensagem_prato)
+        # Se o item não tiver o atributo 'descricao', é uma 'Bebida'
             else:
                 mensagem_bebida = f'{i}. Nome: {item._nome} | Preço: R$ {item._preco} | Tamanho: {item.tamanho} '
                 print(mensagem_bebida)
+
 
 
